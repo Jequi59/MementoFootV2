@@ -1,0 +1,29 @@
+$primary-color : #0084A4;
+$secondary-color : #F7A600;
+
+.navbar{
+    position: relative;
+    background-color: $primary-color;
+    height: 50px;
+    border-radius: 15px;
+    margin: 10px;
+    a{
+        text-decoration: none;
+        color: white;
+        &:hover{
+            border-bottom: 2px solid white;
+            margin-bottom: -2px;
+        }
+    }
+
+}
+
+.navbar-items{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    li{
+        list-style: none;
+    }
+}

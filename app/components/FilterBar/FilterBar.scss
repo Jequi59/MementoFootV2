@@ -1,0 +1,16 @@
+$primary-color : #0084A4;
+$secondary-color : #F7A600;
+
+.filterbar{
+    height: 40px;
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    select{
+        height: 30px;
+        width: 200px;
+        text-align: center;
+        margin-left: 20px;
+    }
+}

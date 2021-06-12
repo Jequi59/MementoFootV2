@@ -1,0 +1,21 @@
+$primary-color : #0084A4;
+$secondary-color : #F7A600;
+
+.banner {
+    background-color: $secondary-color;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    margin: 10px;
+    h1{
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    img{
+        height: 100px;
+        width: 100px;
+    }
+}
