@@ -12,7 +12,7 @@ const orderedGroups = teams.reduce(
       acc.includes(team.groupe) ? acc : acc.concat(team.groupe),[]
     ).sort()
 
-function TeamsPage(){
+function TeamsPage({setUpModal}){
 
     const [filterState, setFilterState] = useState("")
 
@@ -26,7 +26,7 @@ function TeamsPage(){
             <div className="teams-list">
                 {teams.sort(orderTeamsByAlpha).map((team) => 
                     !filterState || filterState === team.groupe ?
-                    ( <TeamCard key={team.id} team={team} />) :
+                    ( <TeamCard key={team.id} team={team} setUpModal={setUpModal} />) :
                     null
                 )}
 

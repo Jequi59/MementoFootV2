@@ -2,9 +2,9 @@ import React from 'react'
 
 import './TeamCard.scss'
 
-function TeamCard({team}) {
+function TeamCard({team, setUpModal}) {
     return(
-        <div className="team-card">
+        <div className="team-card" onClick={() => setUpModal(true, team)} >
             <div className="team-card-header">
                 {team.name}
             </div>
