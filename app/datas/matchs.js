@@ -26,9 +26,9 @@ const matchs = [
         phase : 'Groupe',
         detail : 'Groupe B',
         equipeDom : 'Danemark',
-        scoreDom : 'NC',
+        scoreDom : '0',
         equipeExt : 'Finlande',
-        scoreExt : 'NC',
+        scoreExt : '1',
         date : '12/06/21',
         heure : '18:00'
     },
@@ -37,9 +37,9 @@ const matchs = [
         phase : 'Groupe',
         detail : 'Groupe B',
         equipeDom : 'Belgique',
-        scoreDom : 'NC',
+        scoreDom : '3',
         equipeExt : 'Russie',
-        scoreExt : 'NC',
+        scoreExt : '0',
         date : '12/06/21',
         heure : '21:00'
     },

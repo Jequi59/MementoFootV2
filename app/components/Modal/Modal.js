@@ -16,7 +16,16 @@ function Modal({changeModalState, modalTeam}) {
                         <img src={modalTeam.logo} alt="" />
                     </div>
                     <div className="modal-body-players">
-                        
+                        <h3>Entraineur : </h3>
+                        <p>{modalTeam.trainer} </p>
+                        <h3>Gardiens : </h3>
+                        {modalTeam.players.gardiens.map((gardien, index) => <p key={index} >{gardien}</p>)}
+                        <h3>Défenseurs : </h3>
+                        {modalTeam.players.defenseurs.map((defenseur, index) => <p key={index}>{defenseur}</p>)}
+                        <h3>Milieux : </h3>
+                        {modalTeam.players.milieux.map((milieu, index) => <p key={index}>{milieu}</p>)}
+                        <h3>Attaquants : </h3>
+                        {modalTeam.players.attaquants.map((attaquant, index) => <p key={index}>{attaquant}</p>)}
 
                     </div>
                 </div>
