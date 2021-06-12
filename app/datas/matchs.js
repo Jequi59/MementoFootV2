@@ -4,9 +4,9 @@ const matchs = [
         phase : 'Groupe',
         detail : 'Groupe A',
         equipeDom : 'Turquie',
-        scoreDom : 'NC',
+        scoreDom : '0',
         equipeExt : 'Italie',
-        scoreExt : 'NC',
+        scoreExt : '3',
         date : '11/06/21',
         heure : '21:00'
     },
@@ -15,9 +15,9 @@ const matchs = [
         phase : 'Groupe',
         detail : 'Groupe A',
         equipeDom : 'Pays de Galles',
-        scoreDom : 'NC',
+        scoreDom : '1',
         equipeExt : 'Suisse',
-        scoreExt : 'NC',
+        scoreExt : '1',
         date : '12/06/21',
         heure : '15:00'
     },
