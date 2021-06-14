@@ -23,11 +23,14 @@ function CalendarPage(){
                 teams={teams} 
                 calendarFilterState={calendarFilterState}
                 setCalendarFilterState={setCalendarFilterState} />
-            {matchs.map((match) =>
+            <div className="match-cards">
+                {matchs.map((match) =>
                 !calendarFilterState || calendarFilterState === match.equipeDom ||
                 calendarFilterState === match.equipeExt || calendarFilterState === match.detail ?
                 (<MatchCard key={match.id} match={match} />) : null
             )}
+            </div>
+            
         </div>
     )
 }

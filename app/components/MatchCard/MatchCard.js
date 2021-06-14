@@ -4,6 +4,8 @@ import './MatchCard.scss'
 
 import teams from '../../datas/teams'
 
+import logo_UEFA from '../../assets/uefa_logo.png'
+
 function MatchCard({match}) {
 
     function findLogo(equipe){
@@ -11,13 +13,33 @@ function MatchCard({match}) {
         if (teamObj) {
             return teamObj.logo
         } else {
-            return console.log('logo UEFA');
+            return logo_UEFA
+        }
+    }
+
+    function getResult(result){
+        if (result === "NC") {
+            return null
+        } else {
+            return result
         }
     }
 
     return(
         <div className="match-card">
-            <p>Match N° {match.id}, <img src={findLogo(match.equipeDom)} alt="" /> contre <img src={findLogo(match.equipeExt)} alt="" /></p>
+            <div className="match-card-header">
+                <p>Match N° {match.id}</p>
+            </div>
+            <div className="match-card-body">
+                <img className="match-card-logo"src={findLogo(match.equipeDom)} alt="" />
+                <p className="team-name" >{match.equipeDom}</p>
+                <p className="match-score" >{getResult(match.scoreDom)} - {getResult(match.scoreExt)}</p>
+                <p className="team-name" > {match.equipeExt}</p>
+                <img className="match-card-logo"src={findLogo(match.equipeExt)} alt="" />
+            </div>
+            <div className="match-card-footer">
+                <p>{match.date}</p>
+            </div>
         </div>
     )
 }
