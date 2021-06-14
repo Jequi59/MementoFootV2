@@ -597,7 +597,7 @@ const teams = [
     },
     {
         id: 'FYR-N',
-        name: 'Macédoine du N.',
+        name: 'Macédoine',
         flag: macedoine_flag,
         logo: macedoine_logo,
         groupe: 'Groupe C',
@@ -817,7 +817,7 @@ const teams = [
     },
     {
         id: 'CZE',
-        name: 'Rép. Tcheque',
+        name: 'Rep. Tcheque',
         flag: rep_tcheque_flag,
         logo: rep_tcheque_logo,
         groupe: 'Groupe D',

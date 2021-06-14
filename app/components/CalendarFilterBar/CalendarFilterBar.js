@@ -2,12 +2,12 @@ import React, { Fragment } from 'react'
 
 import './CalendarFilterBar.scss'
 
-function CalendarFilterBar({orderedGroups, teams}){
+function CalendarFilterBar({orderedGroups, teams, setCalendarFilterState}){
 
     return(
         <div className="calendar-filterbar">
             <label htmlFor="filtre">Filtré par : </label>
-            <select name="filtre" id="filtre" >
+            <select name="filtre" id="filtre" onChange={(e)=> setCalendarFilterState(e.target.value)} >
                 <option value="">Tous les matchs</option>
                {orderedGroups.map(function(groupe, index){
                    const GroupTeams = teams.filter(team => team.groupe === groupe)

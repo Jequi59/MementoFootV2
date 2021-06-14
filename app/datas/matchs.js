@@ -82,7 +82,7 @@ const matchs = [
         detail : 'Groupe D',
         equipeDom : 'Ecosse',
         scoreDom : '0',
-        equipeExt : 'Rep Tcheque',
+        equipeExt : 'Rep. Tcheque',
         scoreExt : '2',
         date : '14/06/21',
         heure : '15:00'
@@ -214,7 +214,7 @@ const matchs = [
         detail : 'Groupe D',
         equipeDom : 'Croatie',
         scoreDom : 'NC',
-        equipeExt : 'Rep Tcheque',
+        equipeExt : 'Rep. Tcheque',
         scoreExt : 'NC',
         date : '18/06/21',
         heure : '18:00'
@@ -300,7 +300,7 @@ const matchs = [
         id : '028',
         phase : 'Groupe',
         detail : 'Groupe C',
-        equipeDom : 'Macedoine',
+        equipeDom : 'Macédoine',
         scoreDom : 'NC',
         equipeExt : 'Pays-Bas',
         scoreExt : 'NC',
@@ -333,7 +333,7 @@ const matchs = [
         id : '031',
         phase : 'Groupe',
         detail : 'Groupe D',
-        equipeDom : 'Rep Tcheque',
+        equipeDom : 'Rep. Tcheque',
         scoreDom : 'NC',
         equipeExt : 'Angleterre',
         scoreExt : 'NC',
@@ -561,3 +561,5 @@ const matchs = [
         heure : '21:00'
     }
 ]
+
+export default matchs
