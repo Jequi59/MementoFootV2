@@ -2,7 +2,7 @@ import React from 'react'
 
 import './filterBar.scss'
 
-function filterBar({orderedGroups, setFilterState}){
+function FilterBar({orderedGroups, setFilterState}){
     return(
         <div className="filterbar">
             <label htmlFor="filtre">Filtré par : </label>
@@ -16,4 +16,4 @@ function filterBar({orderedGroups, setFilterState}){
     )
 }
 
-export default filterBar
+export default FilterBar
