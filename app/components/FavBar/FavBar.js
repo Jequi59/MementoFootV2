@@ -8,8 +8,15 @@ function SideBar({favTeamState, removeTeamFromFav}){
             <div className="favorite-teams">
                 <h3>Mes équipes :</h3>
                 {favTeamState.map((team) =>
-                    <p key={team.id}>{team.name}<button onClick={() => removeTeamFromFav(team.name)} >X</button></p>
-                    
+                    <div key={team.id} className="fav-team">
+                        <div className="fav-team-logo">
+                            <img src={team.logo} alt="" />
+                        </div>
+                        <div className="fav-team-name">
+                            <p key={team.id}>{team.name}</p>
+                        </div>
+                        <button onClick={() => removeTeamFromFav(team.name)} >X</button>
+                    </div>               
                 )}
             </div>
             <div className="inc-matchs">

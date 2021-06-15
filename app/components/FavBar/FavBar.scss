@@ -10,4 +10,50 @@ $third-color : #B8CF4E;
     margin-top: 0;
     display: flex;
     flex-direction: column;
+    .fav-team{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 4px solid white;
+        width: 95%;
+        align-self: center;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px 0;
+        background-color: $primary-color;
+        
+        .fav-team-logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+            img{
+                height: 50px;
+                width: 50px;
+                object-fit: contain;
+            }
+        }
+        .fav-team-name{
+            width: 40%;
+            text-align: center;
+            color: white;
+        }
+        button{
+            width: 20px;
+        }
+    }
+}
+.favorite-teams{
+    display: flex;
+    flex-direction: column;
+    border-bottom: white solid 2px;
+    h3{
+        color: white;
+        align-self: center;
+        margin: 10px;
+    }
+    hr{
+        color: white;
+        size: 3px;
+    }
 }

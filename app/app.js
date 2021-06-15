@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState , useEffect} from "react"
 import ReactDOM from "react-dom"
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 //style
@@ -14,9 +14,15 @@ import Modal from "./components/Modal/Modal"
 
 function App(){
 
+  const savedFavTeams = localStorage.getItem('favTeam')
+
   const [modalState, changeModalState] = useState(false)
   const [modalTeam, changeModalTeam] = useState()
-  const [favTeamState, changeFavTeamState] = useState([])
+  const [favTeamState, changeFavTeamState] = useState(savedFavTeams ? JSON.parse(savedFavTeams) : [])
+
+  useEffect(() => {
+		localStorage.setItem('favTeam', JSON.stringify(favTeamState))
+	}, [favTeamState])
 
   function setUpModal(modalValue, team){
     changeModalState(modalValue)

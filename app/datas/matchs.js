@@ -92,9 +92,9 @@ const matchs = [
         phase : 'Groupe',
         detail : 'Groupe E',
         equipeDom : 'Pologne',
-        scoreDom : 'NC',
+        scoreDom : '1',
         equipeExt : 'Slovaquie',
-        scoreExt : 'NC',
+        scoreExt : '2',
         date : '14/06/21',
         heure : '18:00'
     },
@@ -103,9 +103,9 @@ const matchs = [
         phase : 'Groupe',
         detail : 'Groupe E',
         equipeDom : 'Espagne',
-        scoreDom : 'NC',
+        scoreDom : '0',
         equipeExt : 'Suede',
-        scoreExt : 'NC',
+        scoreExt : '0',
         date : '14/06/21',
         heure : '21:00'
     },
