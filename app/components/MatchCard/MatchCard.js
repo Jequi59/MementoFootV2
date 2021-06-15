@@ -38,7 +38,7 @@ function MatchCard({match}) {
                 <img className="match-card-logo"src={findLogo(match.equipeExt)} alt="" />
             </div>
             <div className="match-card-footer">
-                <p>{match.date}</p>
+                <p>{match.date} à {match.heure}</p>
             </div>
         </div>
     )

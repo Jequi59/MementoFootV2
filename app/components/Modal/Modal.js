@@ -2,7 +2,23 @@ import React from 'react'
 
 import './Modal.scss'
 
-function Modal({changeModalState, modalTeam}) {
+function Modal({changeModalState, modalTeam, favTeamState, addTeamToFav, removeTeamFromFav}) {
+
+    function isAdded(currentTeam){
+        const teamAdded = favTeamState.find(team => team.name === currentTeam)
+        if (teamAdded) {
+            return (
+                <div className="add-button" title="Supprimer des favoris"
+                onClick={() => removeTeamFromFav(modalTeam.name)} >Supprimer des favoris</div>
+            )
+        } else {
+            return(
+                <div className="add-button" title="Ajouter au favoris" 
+                onClick={(e) => addTeamToFav(e, modalTeam)}>Ajouter aux favoris</div>
+            )
+        }
+    }
+
     return(
         <div className="modal-externe" onClick={() => changeModalState(false)} >
             <div className="modal-interne" onClick={(e) => e.stopPropagation()} >
@@ -30,7 +46,7 @@ function Modal({changeModalState, modalTeam}) {
                     </div>
                 </div>
                 <div className="modal-footer">
-                    <p>Ajouter au favori</p>
+                    {isAdded(modalTeam.name)}
                 </div>
             </div>
         </div>

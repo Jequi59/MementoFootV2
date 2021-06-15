@@ -14,32 +14,47 @@ import Modal from "./components/Modal/Modal"
 
 function App(){
 
-  const [favoriteState, changeFavoriteState] = useState(false)
   const [modalState, changeModalState] = useState(false)
   const [modalTeam, changeModalTeam] = useState()
+  const [favTeamState, changeFavTeamState] = useState([])
 
   function setUpModal(modalValue, team){
     changeModalState(modalValue)
     changeModalTeam(team)
   }
 
+  function addTeamToFav(e, team){
+    e.stopPropagation()
+    const isAdded = favTeamState.find(favTeam => favTeam.name === team.name)
+    if (!isAdded) {
+      return changeFavTeamState([...favTeamState, team])
+    }
+  }
+
+  function removeTeamFromFav(currentTeam){
+    const filteredFavTeams = favTeamState.filter(favTeam => favTeam.name !== currentTeam)
+    changeFavTeamState(filteredFavTeams)
+  }
+
   return (
     <>
     <Banner />
     <Router>
-      <NavBar favoriteState={favoriteState} changeFavoriteState={changeFavoriteState} />
+      <NavBar />
        <div className="main-container">
-         <FavBar />
+         <FavBar favTeamState={favTeamState} removeTeamFromFav={removeTeamFromFav} />
          <Route exact path="/" component={HomePage}/>
 
          <Route exact path="/equipes" 
             render={(props) => 
-              <TeamsPage {...props} setUpModal={setUpModal} />} />
+              <TeamsPage {...props} setUpModal={setUpModal}
+              addTeamToFav={addTeamToFav} favTeamState={favTeamState} />} />
 
          <Route exact path="/calendrier" component={CalendarPage}/>
        </div>
     </Router>
-    {modalState ? <Modal changeModalState={changeModalState} modalTeam={modalTeam}/> : null}
+    {modalState ? <Modal changeModalState={changeModalState} modalTeam={modalTeam} 
+      favTeamState={favTeamState} addTeamToFav={addTeamToFav} removeTeamFromFav={removeTeamFromFav} /> : null}
     
         
     </>

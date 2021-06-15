@@ -102,4 +102,19 @@ $secondary-color : #F7A600;
     justify-content: center;
     align-items: center;
     background-color: $primary-color;
+    .add-button{
+        background-color: white;
+        color: $primary-color;
+        height: 25px;
+        padding: 0 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background-color: $secondary-color;
+            color: white;
+        }
+    }
 }
