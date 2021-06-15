@@ -19,6 +19,10 @@ function CalendarFilterBar({orderedGroups, teams, setCalendarFilterState}){
                         </Fragment>)
                     }                 
                 )}
+                <option value="Huitieme" className="group-option">Huitieme de Finale</option>
+                <option value="Quart">Quart de Finale</option>
+                <option value="Demi" className="group-option">Demie-Finale</option>
+                <option value="Final">Finale</option>
             </select>
         </div>
     )

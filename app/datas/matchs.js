@@ -7,7 +7,7 @@ const matchs = [
         scoreDom : '0',
         equipeExt : 'Italie',
         scoreExt : '3',
-        date : '11/06/21',
+        date : '11/06/2021',
         heure : '21:00'
     },
     {

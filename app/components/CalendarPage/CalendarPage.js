@@ -15,7 +15,7 @@ function CalendarPage(){
      const orderedGroups = teams.reduce(
         (acc, team) =>
           acc.includes(team.groupe) ? acc : acc.concat(team.groupe),[]
-        ).sort()
+        ).sort()   
 
     return(
         <div className="calendar-page">
@@ -26,7 +26,7 @@ function CalendarPage(){
             <div className="match-cards">
                 {matchs.map((match) =>
                 !calendarFilterState || calendarFilterState === match.equipeDom ||
-                calendarFilterState === match.equipeExt || calendarFilterState === match.detail ?
+                calendarFilterState === match.equipeExt || calendarFilterState === match.detail || calendarFilterState === match.phase ?
                 (<MatchCard key={match.id} match={match} />) : null
             )}
             </div>
