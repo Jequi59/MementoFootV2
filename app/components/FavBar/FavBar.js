@@ -3,6 +3,7 @@ import React from 'react'
 import './FavBar.scss'
 
 import matchs from '../../datas/matchs'
+import teams from '../../datas/teams'
 
 function FavBar({favTeamState, removeTeamFromFav}){
 
@@ -29,6 +30,59 @@ function FavBar({favTeamState, removeTeamFromFav}){
         return futurMatchs
     }
 
+    function CreateLastMatchDiv(equipe){
+        const teamMatchs = GetTeamMatchs(equipe)
+        const pastMatchs = GetPastMatchs(teamMatchs)
+        const lastMatch = pastMatchs[pastMatchs.length - 1]
+
+        const infoTeamDom = teams.find(team => team.name === lastMatch.equipeDom)
+        const infoTeamExt = teams.find(team => team.name === lastMatch.equipeExt)
+        
+        return (
+            <>
+            <div className="last-match">
+                <div className="last-match-top">
+                    <img src={infoTeamDom.logo} alt="" height="20px" width="20px"/>
+                    <p className="team-name">{lastMatch.equipeDom}</p>
+                    <p>{lastMatch.scoreDom}</p>
+                </div>
+                <div className="last-match-bottom">
+                    <img src={infoTeamExt.logo} alt="" height="20px" width="20px"/>
+                    <p className="team-name">{lastMatch.equipeExt}</p>
+                    <p>{lastMatch.scoreExt}</p>
+                </div>
+            </div>
+            </>
+        )
+    }
+
+    function CreateNextMatchDiv(equipe){
+        const teamMatchs = GetTeamMatchs(equipe)
+        const nextMatchs = GetFuturMatchs(teamMatchs)
+        const nextMatch = nextMatchs[0]
+
+        const infoTeamDom = teams.find(team => team.name === nextMatch.equipeDom)
+        const infoTeamExt = teams.find(team => team.name === nextMatch.equipeExt)
+        
+        return (
+            <>
+            <div className="next-match">
+                <div className="next-match-top">
+                    <img src={infoTeamDom.logo} alt="" height="20px" width="20px"/>
+                    <p className="team-name">{nextMatch.equipeDom}</p>
+                </div>
+                <div className="next-match-bottom">
+                    <img src={infoTeamExt.logo} alt="" height="20px" width="20px"/>
+                    <p className="team-name">{nextMatch.equipeExt}</p>
+                </div>
+                <div className="next-match-date">
+                    <p>le {nextMatch.date} à {nextMatch.heure}</p>
+                </div>
+            </div>
+            </>
+        )
+    }
+
     return(
         <div className="favbar">
             <div className="favorite-teams">
@@ -44,13 +98,13 @@ function FavBar({favTeamState, removeTeamFromFav}){
                             </div>
                             <button onClick={() => removeTeamFromFav(team.name)} >X</button>
                         </div>  
-                        <div className="last-match">
+                        <div className="last-match-container">
                             <h3>Dernier Match :</h3>
-                            {<p>{GetPastMatchs(GetTeamMatchs(team.name))[0].id}</p>}
+                            {CreateLastMatchDiv(team.name)}
                         </div>
-                        <div className="next-match">
+                        <div className="next-match-container">
                             <h3>Prochain Match :</h3>
-                            {<p>{GetFuturMatchs(GetTeamMatchs(team.name))[0].id}</p>}
+                            {CreateNextMatchDiv(team.name)}
                         </div>    
                     </div>                                 
                 )}

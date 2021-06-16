@@ -85,45 +85,29 @@ const teams = [
                     name: 'Manuel Neuer',
                     num: '1'
                 },
-                {
-                    name: 'Bernd Leno',
-                    num: '12'
-                },
-                {
-                    name: 'Kevin Trapp',
-                    num: '22'
-                }
-            ]
+
+            ],
             defenseurs:[
-                'Antonio Rüdiger',
-                'Matthias Ginter',
-                'Mats Hummels',
-                'Niklas Süle',
-                'Lukas Klostermann',
-                'Robin Gosens',
-                'Emre Can',
-                'Robin Koch',
-                'Christian Günter'
+                {
+                    name:'',
+                    num: ''
+                },
             ],
-            milieux: [
-                'Marcel Halstenberg',
-                'Joshua Kimmich',
-                'Toni Kroos',
-                'Jonas Hofmann',
-                'Jamal Musiala',
-                'Florian Neuhaus',
-                'Leon Goretzka',
-                'Ilkay Gündogan'
+            milieux:[
+                {
+                    name:'',
+                    num:''
+                },
             ],
-            attaquants: [
-                'Kai Havertz',
-                'Kevin Volland',
-                'Serge Gnabry',
-                'Timo Werner',
-                'Leroy Sané',
-                'Thomas Muller'
+            attaquants:[
+                {
+                    name:'',
+                    num:''
+                },
             ]
         }
+
+    
     },
     {
         id: 'UK',
