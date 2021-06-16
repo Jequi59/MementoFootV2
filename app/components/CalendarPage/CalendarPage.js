@@ -17,6 +17,8 @@ function CalendarPage(){
           acc.includes(team.groupe) ? acc : acc.concat(team.groupe),[]
         ).sort()   
 
+    
+
     return(
         <div className="calendar-page">
             <CalendarFilterBar orderedGroups={orderedGroups} 

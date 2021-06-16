@@ -18,7 +18,7 @@ const matchs = [
         scoreDom : '1',
         equipeExt : 'Suisse',
         scoreExt : '1',
-        date : '12/06/21',
+        date : '12/06/2021',
         heure : '15:00'
     },
     {
@@ -29,7 +29,7 @@ const matchs = [
         scoreDom : '0',
         equipeExt : 'Finlande',
         scoreExt : '1',
-        date : '12/06/21',
+        date : '12/06/2021',
         heure : '18:00'
     },
     {
@@ -40,7 +40,7 @@ const matchs = [
         scoreDom : '3',
         equipeExt : 'Russie',
         scoreExt : '0',
-        date : '12/06/21',
+        date : '12/06/2021',
         heure : '21:00'
     },
     {
@@ -51,7 +51,7 @@ const matchs = [
         scoreDom : '1',
         equipeExt : 'Croatie',
         scoreExt : '0',
-        date : '13/06/21',
+        date : '13/06/2021',
         heure : '15:00'
     },
     {
@@ -62,7 +62,7 @@ const matchs = [
         scoreDom : '3',
         equipeExt : 'Macédoine',
         scoreExt : '1',
-        date : '13/06/21',
+        date : '13/06/2021',
         heure : '18:00'
     },
     {
@@ -73,7 +73,7 @@ const matchs = [
         scoreDom : '3',
         equipeExt : 'Ukraine',
         scoreExt : '2',
-        date : '13/06/21',
+        date : '13/06/2021',
         heure : '21:00'
     },
     {
@@ -84,7 +84,7 @@ const matchs = [
         scoreDom : '0',
         equipeExt : 'Rep. Tcheque',
         scoreExt : '2',
-        date : '14/06/21',
+        date : '14/06/2021',
         heure : '15:00'
     },
     {
@@ -95,7 +95,7 @@ const matchs = [
         scoreDom : '1',
         equipeExt : 'Slovaquie',
         scoreExt : '2',
-        date : '14/06/21',
+        date : '14/06/2021',
         heure : '18:00'
     },
     {
@@ -106,7 +106,7 @@ const matchs = [
         scoreDom : '0',
         equipeExt : 'Suede',
         scoreExt : '0',
-        date : '14/06/21',
+        date : '14/06/2021',
         heure : '21:00'
     },
     {
@@ -114,10 +114,10 @@ const matchs = [
         phase : 'Groupe',
         detail : 'Groupe F',
         equipeDom : 'Hongrie',
-        scoreDom : 'NC',
+        scoreDom : '0',
         equipeExt : 'Portugal',
-        scoreExt : 'NC',
-        date : '15/06/21',
+        scoreExt : '3',
+        date : '15/06/2021',
         heure : '18:00'
     },
     {
@@ -125,10 +125,10 @@ const matchs = [
         phase : 'Groupe',
         detail : 'Groupe F',
         equipeDom : 'France',
-        scoreDom : 'NC',
+        scoreDom : '1',
         equipeExt : 'Allemagne',
-        scoreExt : 'NC',
-        date : '15/06/21',
+        scoreExt : '0',
+        date : '15/06/2021',
         heure : '21:00'
     },
     {
@@ -139,7 +139,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Russie',
         scoreExt : 'NC',
-        date : '16/06/21',
+        date : '16/06/2021',
         heure : '15:00'
     },
     {
@@ -150,7 +150,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Pays de Galles',
         scoreExt : 'NC',
-        date : '16/06/21',
+        date : '16/06/2021',
         heure : '18:00'
     },
     {
@@ -161,7 +161,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Suisse',
         scoreExt : 'NC',
-        date : '16/06/21',
+        date : '16/06/2021',
         heure : '21:00'
     },
     {
@@ -172,7 +172,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Macédoine',
         scoreExt : 'NC',
-        date : '17/06/21',
+        date : '17/06/2021',
         heure : '15:00'
     },
     {
@@ -183,7 +183,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Belgique',
         scoreExt : 'NC',
-        date : '17/06/21',
+        date : '17/06/2021',
         heure : '18:00'
     },
     {
@@ -194,7 +194,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Autriche',
         scoreExt : 'NC',
-        date : '17/06/21',
+        date : '17/06/2021',
         heure : '21:00'
     },
     {
@@ -205,7 +205,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Slovaquie',
         scoreExt : 'NC',
-        date : '18/06/21',
+        date : '18/06/2021',
         heure : '15:00'
     },
     {
@@ -216,7 +216,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Rep. Tcheque',
         scoreExt : 'NC',
-        date : '18/06/21',
+        date : '18/06/2021',
         heure : '18:00'
     },
     {
@@ -227,7 +227,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Ecosse',
         scoreExt : 'NC',
-        date : '18/06/21',
+        date : '18/06/2021',
         heure : '21:00'
     },
     {
@@ -238,7 +238,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'France',
         scoreExt : 'NC',
-        date : '19/06/21',
+        date : '19/06/2021',
         heure : '15:00'
     },
     {
@@ -249,7 +249,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Allemagne',
         scoreExt : 'NC',
-        date : '19/06/21',
+        date : '19/06/2021',
         heure : '18:00'
     },
     {
@@ -260,7 +260,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Pologne',
         scoreExt : 'NC',
-        date : '19/06/21',
+        date : '19/06/2021',
         heure : '21:00'
     },
     {
@@ -271,7 +271,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Pays de Galles',
         scoreExt : 'NC',
-        date : '20/06/21',
+        date : '20/06/2021',
         heure : '18:00'
     },
     {
@@ -282,7 +282,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Turquie',
         scoreExt : 'NC',
-        date : '20/06/21',
+        date : '20/06/2021',
         heure : '18:00'
     },
     {
@@ -293,7 +293,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Autriche',
         scoreExt : 'NC',
-        date : '21/06/21',
+        date : '21/06/2021',
         heure : '18:00'
     },
     {
@@ -304,7 +304,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Pays-Bas',
         scoreExt : 'NC',
-        date : '21/06/21',
+        date : '21/06/2021',
         heure : '18:00'
     },
     {
@@ -315,7 +315,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Danemark',
         scoreExt : 'NC',
-        date : '21/06/21',
+        date : '21/06/2021',
         heure : '21:00'
     },
     {
@@ -326,7 +326,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Belgique',
         scoreExt : 'NC',
-        date : '21/06/21',
+        date : '21/06/2021',
         heure : '21:00'
     },
     {
@@ -337,7 +337,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Angleterre',
         scoreExt : 'NC',
-        date : '22/06/21',
+        date : '22/06/2021',
         heure : '21:00'
     },
     {
@@ -348,7 +348,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Ecosse',
         scoreExt : 'NC',
-        date : '22/06/21',
+        date : '22/06/2021',
         heure : '21:00'
     },
     {
@@ -359,7 +359,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Pologne',
         scoreExt : 'NC',
-        date : '23/06/21',
+        date : '23/06/2021',
         heure : '18:00'
     },
     {
@@ -370,7 +370,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Espagne',
         scoreExt : 'NC',
-        date : '23/06/21',
+        date : '23/06/2021',
         heure : '18:00'
     },
     {
@@ -381,7 +381,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'France',
         scoreExt : 'NC',
-        date : '23/06/21',
+        date : '23/06/2021',
         heure : '21:00'
     },
     {
@@ -392,7 +392,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'Hongrie',
         scoreExt : 'NC',
-        date : '23/06/21',
+        date : '23/06/2021',
         heure : '21:00'
     },
     {
@@ -403,7 +403,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : '2° Groupe B',
         scoreExt : 'NC',
-        date : '26/06/21',
+        date : '26/06/2021',
         heure : '18:00'
     },
     {
@@ -414,7 +414,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : '2° Groupe C',
         scoreExt : 'NC',
-        date : '26/06/21',
+        date : '26/06/2021',
         heure : '21:00'
     },
     {
@@ -425,7 +425,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : '3° Groupe D,E ou F',
         scoreExt : 'NC',
-        date : '27/06/21',
+        date : '27/06/2021',
         heure : '18:00'
     },
     {
@@ -436,7 +436,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : '3° Groupe D,E ou F',
         scoreExt : 'NC',
-        date : '27/06/21',
+        date : '27/06/2021',
         heure : '21:00'
     },
     {
@@ -447,7 +447,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : '2° Groupe E',
         scoreExt : 'NC',
-        date : '28/06/21',
+        date : '28/06/2021',
         heure : '18:00'
     },
     {
@@ -458,7 +458,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : '3° Groupe A, B ou C',
         scoreExt : 'NC',
-        date : '28/06/21',
+        date : '28/06/2021',
         heure : '21:00'
     },
     {
@@ -469,7 +469,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : '2° Groupe F',
         scoreExt : 'NC',
-        date : '29/06/21',
+        date : '29/06/2021',
         heure : '18:00'
     },
     {
@@ -480,7 +480,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : '3° Groupe A, B, C ou D',
         scoreExt : 'NC',
-        date : '29/06/21',
+        date : '29/06/2021',
         heure : '21:00'
     },
     {
@@ -491,7 +491,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'NC',
         scoreExt : 'NC',
-        date : '02/07/21',
+        date : '02/07/2021',
         heure : '18:00'
     },
     {
@@ -502,7 +502,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'NC',
         scoreExt : 'NC',
-        date : '02/07/21',
+        date : '02/07/2021',
         heure : '21:00'
     },
     {
@@ -513,7 +513,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'NC',
         scoreExt : 'NC',
-        date : '03/07/21',
+        date : '03/07/2021',
         heure : '18:00'
     },
     {
@@ -524,7 +524,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'NC',
         scoreExt : 'NC',
-        date : '03/07/21',
+        date : '03/07/2021',
         heure : '21:00'
     },
     {
@@ -535,7 +535,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'NC',
         scoreExt : 'NC',
-        date : '06/07/21',
+        date : '06/07/2021',
         heure : '21:00'
     },
     {
@@ -546,7 +546,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'NC',
         scoreExt : 'NC',
-        date : '07/07/21',
+        date : '07/07/2021',
         heure : '21h00'
     },
     {
@@ -557,7 +557,7 @@ const matchs = [
         scoreDom : 'NC',
         equipeExt : 'NC',
         scoreExt : 'NC',
-        date : '11/07/21',
+        date : '11/07/2021',
         heure : '21:00'
     }
 ]
