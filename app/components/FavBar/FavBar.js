@@ -4,7 +4,7 @@ import './FavBar.scss'
 
 import matchs from '../../datas/matchs'
 
-function SideBar({favTeamState, removeTeamFromFav}){
+function FavBar({favTeamState, removeTeamFromFav}){
 
     function GetTeamMatchs(teamName){
         const filteredTeamMatchs = matchs.filter(match => match.equipeDom === teamName || match.equipeExt === teamName)
@@ -20,13 +20,13 @@ function SideBar({favTeamState, removeTeamFromFav}){
     function GetPastMatchs(teamMatchs){
         const now = new Date().toLocaleDateString()
         const pastMatchs = teamMatchs.filter(teamMatch => tranformDate(teamMatch.date) < now)
-        return pastMatchs       
+        return pastMatchs      
     }
 
     function GetFuturMatchs(teamMatchs){
         const now = new Date().toLocaleDateString()
         const futurMatchs = teamMatchs.filter(teamMatch => tranformDate(teamMatch.date) >= now)
-        return futurMatchs 
+        return futurMatchs
     }
 
     return(
@@ -34,8 +34,8 @@ function SideBar({favTeamState, removeTeamFromFav}){
             <div className="favorite-teams">
                 <h3>Mes équipes :</h3>
                 {favTeamState.map((team) =>
-                    <div className="fav-team-container">
-                        <div key={team.id} className="fav-team">
+                    <div key={team.id} className="fav-team-container">
+                        <div  className="fav-team">
                             <div className="fav-team-logo">
                                 <img src={team.logo} alt="" />
                             </div>
@@ -46,15 +46,11 @@ function SideBar({favTeamState, removeTeamFromFav}){
                         </div>  
                         <div className="last-match">
                             <h3>Dernier Match :</h3>
-                            {GetPastMatchs(GetTeamMatchs(team.name)).map((pastMatch) => 
-                                <p>{pastMatch.id}</p>
-                            )}
+                            {<p>{GetPastMatchs(GetTeamMatchs(team.name))[0].id}</p>}
                         </div>
                         <div className="next-match">
                             <h3>Prochain Match :</h3>
-                            {GetFuturMatchs(GetTeamMatchs(team.name)).map((futurMatch) => 
-                                <p>{futurMatch.id}</p>
-                            )}
+                            {<p>{GetFuturMatchs(GetTeamMatchs(team.name))[0].id}</p>}
                         </div>    
                     </div>                                 
                 )}
@@ -63,4 +59,4 @@ function SideBar({favTeamState, removeTeamFromFav}){
     )
 }
 
-export default SideBar
+export default FavBar
