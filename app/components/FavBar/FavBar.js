@@ -19,7 +19,7 @@ function SideBar({favTeamState, removeTeamFromFav}){
 
     function GetPastMatchs(teamMatchs){
         const now = new Date().toLocaleDateString()
-        const pastMatchs = teamMatchs.filter(teamMatch => tranformDate(teamMatch.date) <= now)
+        const pastMatchs = teamMatchs.filter(teamMatch => tranformDate(teamMatch.date) < now)
         return pastMatchs       
     }
 
@@ -34,34 +34,31 @@ function SideBar({favTeamState, removeTeamFromFav}){
             <div className="favorite-teams">
                 <h3>Mes équipes :</h3>
                 {favTeamState.map((team) =>
-                    <div key={team.id} className="fav-team">
-                        <div className="fav-team-logo">
-                            <img src={team.logo} alt="" />
+                    <div className="fav-team-container">
+                        <div key={team.id} className="fav-team">
+                            <div className="fav-team-logo">
+                                <img src={team.logo} alt="" />
+                            </div>
+                            <div className="fav-team-name">
+                                <p key={team.id}>{team.name}</p>
+                            </div>
+                            <button onClick={() => removeTeamFromFav(team.name)} >X</button>
+                        </div>  
+                        <div className="last-match">
+                            <h3>Dernier Match :</h3>
+                            {GetPastMatchs(GetTeamMatchs(team.name)).map((pastMatch) => 
+                                <p>{pastMatch.id}</p>
+                            )}
                         </div>
-                        <div className="fav-team-name">
-                            <p key={team.id}>{team.name}</p>
-                        </div>
-                        <button onClick={() => removeTeamFromFav(team.name)} >X</button>
-                    </div>               
+                        <div className="next-match">
+                            <h3>Prochain Match :</h3>
+                            {GetFuturMatchs(GetTeamMatchs(team.name)).map((futurMatch) => 
+                                <p>{futurMatch.id}</p>
+                            )}
+                        </div>    
+                    </div>                                 
                 )}
-            </div>
-            <div className="inc-matchs">
-                <h3>Match a venir : </h3>
-                {/* {favTeamState.map((favTeam) => 
-                    GetFuturMatchs(GetTeamMatchs(favTeam.name))).map((match) =>
-                        match.map((match)=> 
-                            <p>{match.id}</p>
-                    )
-                )} */}
-                {favTeamState.map(function (favTeam) {
-                    const futurMatchs = GetFuturMatchs(GetTeamMatchs(favTeam.name))
-                    return console.log(futurMatchs);
-                }
-                )}
-            </div>
-            <div className="last-matchs">
-                <h3>Match terminés :</h3>
-            </div>
+            </div>            
         </div>
     )
 }
