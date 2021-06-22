@@ -17,6 +17,7 @@ function FavBar({favTeamState, removeTeamFromFav}){
         const correctDate = matchDate.split('/');
         const corectHour = matchHour.split(':')
         var finalDate = new Date(correctDate[2], correctDate[1] - 1, correctDate[0], corectHour[0], corectHour[1])
+        finalDate.setHours(finalDate.getHours() + 2 )
         return finalDate    
     }
 

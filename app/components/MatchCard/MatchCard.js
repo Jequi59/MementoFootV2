@@ -28,7 +28,7 @@ function MatchCard({match}) {
     return(
         <div className="match-card">
             <div className="match-card-header">
-                <p>Match N° {match.id}</p>
+                <p>Match N° {match.id} / Match de {match.phase}</p>
             </div>
             <div className="match-card-body">
                 <img className="match-card-logo"src={findLogo(match.equipeDom)} alt="" />
