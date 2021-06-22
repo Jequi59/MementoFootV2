@@ -105,3 +105,11 @@ $third-color : #B8CF4E;
     background-color: $primary-color;
     color: white;
 }
+
+.finish{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+}

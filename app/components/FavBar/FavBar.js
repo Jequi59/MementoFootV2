@@ -4,6 +4,7 @@ import './FavBar.scss'
 
 import matchs from '../../datas/matchs'
 import teams from '../../datas/teams'
+import uefa_logo from '../../assets/uefa_logo.png'
 
 function FavBar({favTeamState, removeTeamFromFav}){
 
@@ -12,22 +13,17 @@ function FavBar({favTeamState, removeTeamFromFav}){
         return filteredTeamMatchs;
     }
 
-    function tranformDate(matchDate){
+    function tranformDate(matchDate, matchHour){
         const correctDate = matchDate.split('/');
-        var finalDate = new Date(correctDate[2], correctDate[1] - 1, correctDate[0]).toLocaleDateString();
+        const corectHour = matchHour.split(':')
+        var finalDate = new Date(correctDate[2], correctDate[1] - 1, correctDate[0], corectHour[0], corectHour[1])
         return finalDate    
     }
 
     function GetPastMatchs(teamMatchs){
-        const now = new Date().toLocaleDateString()
-        const pastMatchs = teamMatchs.filter(teamMatch => tranformDate(teamMatch.date) < now)
+        const now = new Date()
+        const pastMatchs = teamMatchs.filter(teamMatch => tranformDate(teamMatch.date, teamMatch.heure) < now)
         return pastMatchs      
-    }
-
-    function GetFuturMatchs(teamMatchs){
-        const now = new Date().toLocaleDateString()
-        const futurMatchs = teamMatchs.filter(teamMatch => tranformDate(teamMatch.date) >= now)
-        return futurMatchs
     }
 
     function CreateLastMatchDiv(equipe){
@@ -56,31 +52,56 @@ function FavBar({favTeamState, removeTeamFromFav}){
         )
     }
 
+    function findInfoTeam(equipe){
+        const teamObj = teams.find(team => team.name === equipe) 
+        if (teamObj) {
+            return teamObj
+        } else {         
+            return {id: 'NoID', name: 'NC', logo: uefa_logo}
+        }
+    }
+
+    function GetNextMatchs(teamMatchs){
+        const now = new Date()
+        const nextMatchs = teamMatchs.filter(teamMatch => tranformDate(teamMatch.date, teamMatch.heure) >= now)
+        return nextMatchs      
+    }
+
     function CreateNextMatchDiv(equipe){
         const teamMatchs = GetTeamMatchs(equipe)
-        const nextMatchs = GetFuturMatchs(teamMatchs)
-        const nextMatch = nextMatchs[0]
-
-        const infoTeamDom = teams.find(team => team.name === nextMatch.equipeDom)
-        const infoTeamExt = teams.find(team => team.name === nextMatch.equipeExt)
+        const nextsMatchs = GetNextMatchs(teamMatchs)
         
-        return (
-            <>
-            <div className="next-match">
-                <div className="next-match-top">
-                    <img src={infoTeamDom.logo} alt="" height="20px" width="20px"/>
-                    <p className="team-name">{nextMatch.equipeDom}</p>
+        if (nextsMatchs.length > 0 ) {
+            const nextMatch = nextsMatchs[0]
+
+            const infoTeamDom = findInfoTeam(nextMatch.equipeDom)
+            const infoTeamExt = findInfoTeam(nextMatch.equipeExt)
+
+            return (
+                <>
+                <div className="next-match">
+                    <div className="next-match-top">
+                        <img src={infoTeamDom.logo} alt="" height="20px" width="20px"/>
+                        <p className="team-name">{infoTeamDom.name}</p>
+                    </div>
+                    <div className="next-match-bottom">
+                        <img src={infoTeamExt.logo} alt="" height="20px" width="20px"/>
+                        <p className="team-name">{infoTeamExt.name}</p>
+                    </div>
+                    <div className="next-match-date">
+                        <p>le {nextMatch.date} à {nextMatch.heure}</p>
+                    </div>
                 </div>
-                <div className="next-match-bottom">
-                    <img src={infoTeamExt.logo} alt="" height="20px" width="20px"/>
-                    <p className="team-name">{nextMatch.equipeExt}</p>
-                </div>
-                <div className="next-match-date">
-                    <p>le {nextMatch.date} à {nextMatch.heure}</p>
-                </div>
-            </div>
-            </>
-        )
+                </>)
+            
+        } else {
+            return (
+               <div className="next-match finish">
+                <p>Equipe Eliminée</p>
+            </div> 
+            )
+            
+        }
     }
 
     return(
@@ -103,8 +124,8 @@ function FavBar({favTeamState, removeTeamFromFav}){
                             {CreateLastMatchDiv(team.name)}
                         </div>
                         <div className="next-match-container">
-                            <h3>Prochain Match :</h3>
-                            {CreateNextMatchDiv(team.name)}
+                            <h3>Prochain Match :</h3>  
+                            {CreateNextMatchDiv(team.name)}                    
                         </div>    
                     </div>                                 
                 )}
