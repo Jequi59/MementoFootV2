@@ -7,4 +7,15 @@ $secondary-color : #F7A600;
     border: 4px solid $secondary-color;
     border-radius: 15px;
     width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-last-matchs-title, .home-next-matchs-title{
+    height: 40px;
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
