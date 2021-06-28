@@ -23,5 +23,7 @@ $secondary-color : #F7A600;
 
 .home-last-matchs-title-container, .home-next-matchs-title-container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
 }

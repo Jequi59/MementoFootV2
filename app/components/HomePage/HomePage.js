@@ -21,14 +21,14 @@ function HomePage(){
         const now = new Date()
         const pastMatchs = matchs.filter(match => tranformDate(match.date, match.heure) < now)
         const index = pastMatchs.length
-        const finalLastMatchs = [pastMatchs[index - 3],pastMatchs[index - 2],pastMatchs[index - 1]]
+        const finalLastMatchs = [pastMatchs[index - 4],pastMatchs[index - 3],pastMatchs[index - 2],pastMatchs[index - 1]]
         return finalLastMatchs      
     }
 
     function GetNextMatchs(){
         const now = new Date()
         const nextMatchs = matchs.filter(match => tranformDate(match.date, match.heure) >= now)
-        const finalNextMatchs = [nextMatchs[0],nextMatchs[1],nextMatchs[2]]
+        const finalNextMatchs = [nextMatchs[0],nextMatchs[1],nextMatchs[2],nextMatchs[3]]
         return finalNextMatchs      
     }
 
