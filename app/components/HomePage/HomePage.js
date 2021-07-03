@@ -5,6 +5,8 @@ import '../HomePage/HomePage.scss'
 import matchs from '../../datas/matchs'
 import teams from '../../datas/teams'
 
+import logo_UEFA from '../../assets/uefa_logo.png'
+
 function HomePage(){
 
     const now = new Date()
